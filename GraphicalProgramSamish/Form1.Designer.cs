@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.draw_panel = new System.Windows.Forms.Panel();
+            this.pnlOutput = new System.Windows.Forms.Panel();
             this.RunButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,24 +42,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_posX = new System.Windows.Forms.Label();
-            this.textBoxCmd = new System.Windows.Forms.TextBox();
+            this.txtInputCode = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // draw_panel
+            // pnlOutput
             // 
-            this.draw_panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.draw_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.draw_panel.Location = new System.Drawing.Point(12, 27);
-            this.draw_panel.Name = "draw_panel";
-            this.draw_panel.Size = new System.Drawing.Size(434, 284);
-            this.draw_panel.TabIndex = 0;
-            this.draw_panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panel_MouseClick);
+            this.pnlOutput.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlOutput.Location = new System.Drawing.Point(12, 27);
+            this.pnlOutput.Name = "pnlOutput";
+            this.pnlOutput.Size = new System.Drawing.Size(434, 284);
+            this.pnlOutput.TabIndex = 0;
+            this.pnlOutput.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panel_MouseClick);
             // 
             // RunButton
             // 
-            this.RunButton.Location = new System.Drawing.Point(348, 386);
+            this.RunButton.Location = new System.Drawing.Point(610, 327);
             this.RunButton.Name = "RunButton";
             this.RunButton.Size = new System.Drawing.Size(75, 23);
             this.RunButton.TabIndex = 1;
@@ -91,21 +91,21 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -173,12 +173,13 @@
             this.label_posX.TabIndex = 8;
             this.label_posX.Text = "0.0";
             // 
-            // textBoxCmd
+            // txtInputCode
             // 
-            this.textBoxCmd.Location = new System.Drawing.Point(212, 327);
-            this.textBoxCmd.Name = "textBoxCmd";
-            this.textBoxCmd.Size = new System.Drawing.Size(211, 20);
-            this.textBoxCmd.TabIndex = 2;
+            this.txtInputCode.Location = new System.Drawing.Point(452, 27);
+            this.txtInputCode.Name = "txtInputCode";
+            this.txtInputCode.Size = new System.Drawing.Size(233, 284);
+            this.txtInputCode.TabIndex = 7;
+            this.txtInputCode.Text = "";
             // 
             // Form1
             // 
@@ -186,10 +187,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(697, 450);
-            this.Controls.Add(this.draw_panel);
+            this.Controls.Add(this.txtInputCode);
+            this.Controls.Add(this.pnlOutput);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.RunButton);
-            this.Controls.Add(this.textBoxCmd);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -206,7 +207,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel draw_panel;
+        private System.Windows.Forms.Panel pnlOutput;
         private System.Windows.Forms.Button RunButton;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -220,7 +221,7 @@
         private System.Windows.Forms.Label label_posX;
         private System.Windows.Forms.Label label_posY;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxCmd;
+        private System.Windows.Forms.RichTextBox txtInputCode;
     }
 }
 
