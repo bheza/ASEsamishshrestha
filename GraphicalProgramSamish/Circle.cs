@@ -7,44 +7,65 @@ using System.Threading.Tasks;
 
 namespace GraphicalProgramSamish
 {
-    class Circle : Shape
+    public class Circle : Shape
     {
-        /// <summary>
-        /// Getting value for ellipse
-        /// </summary>
-        int x, y, size, size1;
-        Color c1;
-        int texturestyle;
-        Brush bb;
-
-        public override void Draw(Graphics g)
+        public int x, y, radius;
+        public Circle() : base()
         {
-            Pen p = new Pen(c1, 5);
-            if (texturestyle == 0)
-            {
-                g.DrawEllipse(p, x, y, size, size1);
-            }
-            else
-            {
-                g.FillEllipse(bb, x, y, size, size1);
-            }
+
         }
         /// <summary>
-        /// setting required parameter to draw circle
+        /// This method takes the values of x-axis, y-axis, width and height of Shape Rectangle as 
+        /// a Parameter
         /// </summary>
-        /// <param name="texturestyle"></param>
-        /// <param name="bb"></param>
-        /// <param name="c1"></param>
-        /// <param name="list"></param>
-        public override void set(int texturestyle, Brush bb, Color c1, params int[] list)
+        /// <param name="x">x-axis cordinate</param>
+        /// <param name="y">y-axis cordinate</param>
+        /// <param name="radius">Radius of the Circle</param>
+        public Circle(int x, int y, int radius)
         {
-            this.texturestyle = texturestyle;
-            this.bb = bb;
-            this.c1 = c1;
-            this.x = list[0];
-            this.y = list[1];
-            this.size = list[2];
-            this.size1 = list[3];
+
+            this.radius = radius;
+        }
+
+        /// <summary>
+        /// This method draws the Shape
+        /// </summary>
+        /// <param name="g">Its takes variable of type Graphics</param>
+        public void draw(Graphics g)
+        {
+            try
+            {
+                Pen p = new Pen(Color.Black, 2);
+                SolidBrush b = new SolidBrush(Color.Red);
+                g.DrawEllipse(p, x - radius, y - radius, radius * 2, radius * 2);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+        /// <summary>
+        /// Passing an Array
+        /// </summary>
+        /// <param name="list">pass parameters in an Array</param>
+        public void set(params int[] list)
+        {
+            try
+            {
+                this.x = list[0];
+                this.y = list[1];
+                this.radius = list[2];
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
     }
 }
