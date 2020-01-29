@@ -453,7 +453,7 @@ namespace GraphicalProgramSamish
                     {
                         Int32.TryParse(param[0], out toX);
                         Int32.TryParse(param[1], out toY);
-                        IShape line = factory.getShape("line");
+                        Shape line = factory.getShape("line");
                         line.set(x, y, toX, toY);
                         line.draw(g);
                     }
@@ -471,7 +471,7 @@ namespace GraphicalProgramSamish
 
                         if (cmd[1].Equals("radius") == true)
                         {
-                            IShape circle = factory.getShape("circle");
+                            Shape circle = factory.getShape("circle");
                             Circle c = new Circle();
                             c.set(x, y, radius);
                             c.draw(g);
@@ -480,7 +480,7 @@ namespace GraphicalProgramSamish
                         else
                         {
                             Int32.TryParse(cmd[1], out radius);
-                            IShape circle = factory.getShape("circle");
+                            Shape circle = factory.getShape("circle");
                             Circle c = new Circle();
                             c.set(x, y, radius);
                             c.draw(g);
@@ -513,7 +513,7 @@ namespace GraphicalProgramSamish
 
 
 
-                            IShape circle = factory.getShape("rectangle");
+                            Shape circle = factory.getShape("rectangle");
                             Rectangle r = new Rectangle();
                             r.set(x, y, width, height);
                             r.draw(g);
@@ -534,7 +534,7 @@ namespace GraphicalProgramSamish
 
                         Int32.TryParse(param[0], out width);
                         Int32.TryParse(param[1], out height);
-                        IShape circle = factory.getShape("triangle");
+                        Shape circle = factory.getShape("triangle");
                         Triangle r = new Triangle();
                         r.set(x, y, width, height);
                         r.draw(g);
@@ -555,7 +555,7 @@ namespace GraphicalProgramSamish
                             for (int rc = 0; rc < repeatval; rc++)
                             {
                                 radius = radius + r;
-                                IShape circle = factory.getShape("circle");
+                                Shape circle = factory.getShape("circle");
                                 Circle c = new Circle();
                                 c.set(x, y, radius);
                                 c.draw(g);
@@ -566,7 +566,7 @@ namespace GraphicalProgramSamish
                             for (int rc = 0; rc < repeatval; rc++)
                             {
                                 radius = radius - r;
-                                IShape circle = factory.getShape("circle");
+                                Shape circle = factory.getShape("circle");
                                 Circle c = new Circle();
                                 c.set(x, y, radius);
                                 c.draw(g);
@@ -585,7 +585,7 @@ namespace GraphicalProgramSamish
                             {
                                 width = width + increment;
                                 height = height + increment;
-                                IShape rectangle = factory.getShape("rectangle");
+                                Shape rectangle = factory.getShape("rectangle");
                                 Rectangle rec = new Rectangle();
                                 rec.set(x, y, width, height);
                                 rec.draw(g);
@@ -597,7 +597,7 @@ namespace GraphicalProgramSamish
                             {
                                 width = width - increment;
                                 height = height - increment;
-                                IShape rectangle = factory.getShape("rectangle");
+                                Shape rectangle = factory.getShape("rectangle");
                                 Rectangle rec = new Rectangle();
                                 rec.set(x, y, width, height);
                                 rec.draw(g);
@@ -617,7 +617,7 @@ namespace GraphicalProgramSamish
                             {
                                 width = width + increment;
                                 height = height + increment;
-                                IShape circle = factory.getShape("triangle");
+                                Shape circle = factory.getShape("triangle");
                                 Triangle t = new Triangle();
                                 t.set(x, y, width, height);
                                 t.draw(g);
@@ -629,7 +629,7 @@ namespace GraphicalProgramSamish
                             {
                                 width = width - increment;
                                 height = height - increment;
-                                IShape circle = factory.getShape("triangle");
+                                Shape circle = factory.getShape("triangle");
                                 Triangle t = new Triangle();
                                 t.set(x, y, width, height);
                                 t.draw(g);

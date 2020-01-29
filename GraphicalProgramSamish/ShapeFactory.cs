@@ -6,29 +6,39 @@ using System.Threading.Tasks;
 
 namespace GraphicalProgramSamish
 {
-    class ShapeFactory
+    class FactoryClass : ShapeCreator
     {
         /// <summary>
-        /// checking the type of shape
+        /// It passes the shape of any objects
         /// </summary>
         /// <param name="shapeType"></param>
-        /// <returns>return shape object </returns>
-        public Shape GetShape(string shapeType)
+        /// <returns></returns>
+        public override Shape getShape(string shapeType)
         {
-            if (shapeType == "circle")
+            shapeType = shapeType.ToLower().Trim(); //To get rid of Case Sensitivity
+
+
+            if (shapeType.Equals("circle"))
             {
                 return new Circle();
+
             }
-            else if (shapeType == "rectangle")
+            else if (shapeType.Equals("rectangle"))
             {
                 return new Rectangle();
-            }
 
-            else if (shapeType == "triangle")
+            }
+            else if (shapeType.Equals("triangle"))
             {
                 return new Triangle();
+
             }
-            return null;
+            else
+            {
+                //If the shape doesnot have any defination in our project throw an appropriate exception
+                System.ArgumentException argEx = new System.ArgumentException("Factory error: " + shapeType + " does not exist");
+                throw argEx;
+            }
         }
     }
 }

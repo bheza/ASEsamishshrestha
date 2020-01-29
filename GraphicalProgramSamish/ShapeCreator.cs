@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace GraphicalProgramSamish
 {
-    Abstract class ShapeCreator
+    abstract class ShapeCreator
     {
         /// <summary>
         /// This method is used for shaping an objects
         /// </summary>
         /// <param name="ShapeType"></param>
         /// <returns></returns>
-        public abstract IShape getShape(string ShapeType);
+        public abstract Shape getShape(string ShapeType);
 
     }
 }

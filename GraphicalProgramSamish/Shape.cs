@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace GraphicalProgramSamish
 {
+    /// <summary>
+    /// Here we are using important concept of OOP Inheritance. This is the interface which is inherited by
+    /// child classes
+    /// </summary>
     public interface Shape
     {
-        /// <summary>
         /// <summary>
         /// This is the method declaration whose code is written inside 
         /// the inherited class
