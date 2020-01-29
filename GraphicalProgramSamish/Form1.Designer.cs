@@ -30,9 +30,6 @@
         {
             this.draw_panel = new System.Windows.Forms.Panel();
             this.RunButton = new System.Windows.Forms.Button();
-            this.textBoxCmd = new System.Windows.Forms.TextBox();
-            this.mulCmdTxt = new System.Windows.Forms.TextBox();
-            this.Execute = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_posX = new System.Windows.Forms.Label();
+            this.textBoxCmd = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -55,44 +53,19 @@
             this.draw_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.draw_panel.Location = new System.Drawing.Point(12, 27);
             this.draw_panel.Name = "draw_panel";
-            this.draw_panel.Size = new System.Drawing.Size(434, 392);
+            this.draw_panel.Size = new System.Drawing.Size(434, 284);
             this.draw_panel.TabIndex = 0;
             this.draw_panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panel_MouseClick);
             // 
             // RunButton
             // 
-            this.RunButton.Location = new System.Drawing.Point(461, 174);
+            this.RunButton.Location = new System.Drawing.Point(348, 386);
             this.RunButton.Name = "RunButton";
             this.RunButton.Size = new System.Drawing.Size(75, 23);
             this.RunButton.TabIndex = 1;
             this.RunButton.Text = "Run";
             this.RunButton.UseVisualStyleBackColor = true;
             this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
-            // 
-            // textBoxCmd
-            // 
-            this.textBoxCmd.Location = new System.Drawing.Point(461, 148);
-            this.textBoxCmd.Name = "textBoxCmd";
-            this.textBoxCmd.Size = new System.Drawing.Size(218, 20);
-            this.textBoxCmd.TabIndex = 2;
-            // 
-            // mulCmdTxt
-            // 
-            this.mulCmdTxt.Location = new System.Drawing.Point(461, 203);
-            this.mulCmdTxt.Multiline = true;
-            this.mulCmdTxt.Name = "mulCmdTxt";
-            this.mulCmdTxt.Size = new System.Drawing.Size(218, 183);
-            this.mulCmdTxt.TabIndex = 3;
-            // 
-            // Execute
-            // 
-            this.Execute.Location = new System.Drawing.Point(461, 396);
-            this.Execute.Name = "Execute";
-            this.Execute.Size = new System.Drawing.Size(75, 23);
-            this.Execute.TabIndex = 4;
-            this.Execute.Text = "Execute";
-            this.Execute.UseVisualStyleBackColor = true;
-            this.Execute.Click += new System.EventHandler(this.Execute_Click);
             // 
             // menuStrip1
             // 
@@ -156,7 +129,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label_posX);
-            this.groupBox1.Location = new System.Drawing.Point(461, 51);
+            this.groupBox1.Location = new System.Drawing.Point(12, 327);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(169, 82);
             this.groupBox1.TabIndex = 6;
@@ -199,14 +172,19 @@
             this.label_posX.TabIndex = 8;
             this.label_posX.Text = "0.0";
             // 
+            // textBoxCmd
+            // 
+            this.textBoxCmd.Location = new System.Drawing.Point(212, 327);
+            this.textBoxCmd.Name = "textBoxCmd";
+            this.textBoxCmd.Size = new System.Drawing.Size(211, 20);
+            this.textBoxCmd.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(697, 450);
-            this.Controls.Add(this.mulCmdTxt);
-            this.Controls.Add(this.Execute);
             this.Controls.Add(this.draw_panel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.RunButton);
@@ -229,9 +207,6 @@
 
         private System.Windows.Forms.Panel draw_panel;
         private System.Windows.Forms.Button RunButton;
-        private System.Windows.Forms.TextBox textBoxCmd;
-        private System.Windows.Forms.TextBox mulCmdTxt;
-        private System.Windows.Forms.Button Execute;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
@@ -244,6 +219,7 @@
         private System.Windows.Forms.Label label_posX;
         private System.Windows.Forms.Label label_posY;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxCmd;
     }
 }
 
